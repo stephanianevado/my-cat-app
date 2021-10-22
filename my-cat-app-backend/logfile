@@ -1,0 +1,42 @@
+2021-10-15 18:16:20.274 CEST [20372] LOG:  starting PostgreSQL 12.2 on x86_64-apple-darwin17.7.0, compiled by clang version 10.0.0 , 64-bit
+2021-10-15 18:16:20.277 CEST [20372] LOG:  listening on IPv6 address "::1", port 5432
+2021-10-15 18:16:20.277 CEST [20372] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-10-15 18:16:20.278 CEST [20372] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2021-10-15 18:16:20.309 CEST [20373] LOG:  database system was shut down at 2021-10-15 18:16:12 CEST
+2021-10-15 18:16:20.321 CEST [20372] LOG:  database system is ready to accept connections
+2021-10-15 18:21:07.015 CEST [20471] ERROR:  permission denied for table cats
+2021-10-15 18:21:07.015 CEST [20471] STATEMENT:  SELECT * FROM cats
+2021-10-15 18:21:29.707 CEST [20482] ERROR:  permission denied for table cats
+2021-10-15 18:21:29.707 CEST [20482] STATEMENT:  SELECT * FROM cats
+2021-10-15 18:23:38.524 CEST [20551] ERROR:  permission denied for table cats
+2021-10-15 18:23:38.524 CEST [20551] STATEMENT:  SELECT * FROM cats
+2021-10-17 20:13:36.286 CEST [20405] ERROR:  syntax error at or near "SELECT" at character 20
+2021-10-17 20:13:36.286 CEST [20405] STATEMENT:  SELECT * FROM cats
+	SELECT * FROM cats;
+2021-10-17 20:14:53.447 CEST [20405] ERROR:  syntax error at or near "select" at character 20
+2021-10-17 20:14:53.447 CEST [20405] STATEMENT:  SELECT * FROM cats
+	select * from cats
+	quit;
+2021-10-17 20:27:30.440 CEST [23165] ERROR:  column "222" does not exist at character 42
+2021-10-17 20:27:30.440 CEST [23165] STATEMENT:  INSERT INTO cats (id, name, age) VALUES ("222", "Caesar", 8), ("333", "Lola", 10)
+2021-10-17 20:29:23.336 CEST [23198] ERROR:  column "222" does not exist at character 42
+2021-10-17 20:29:23.336 CEST [23198] STATEMENT:  INSERT INTO cats (id, name, age) VALUES ("222", "Caesar", 8)
+2021-10-17 20:35:04.964 CEST [23343] ERROR:  duplicate key value violates unique constraint "firstkey"
+2021-10-17 20:35:04.964 CEST [23343] DETAIL:  Key (id)=(222) already exists.
+2021-10-17 20:35:04.964 CEST [23343] STATEMENT:  INSERT INTO cats (id, name, age) VALUES('222', 'Caesar', 8)
+2021-10-17 20:37:32.935 CEST [23343] ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2021-10-17 20:37:32.935 CEST [23343] STATEMENT:  SELECT id, name, age FROM cats
+2021-10-20 10:59:25.869 CEST [44401] ERROR:  syntax error at or near "RETUNING" at character 18
+2021-10-20 10:59:25.869 CEST [44401] STATEMENT:  INSERT INTO cats RETUNING id
+2021-10-20 10:59:59.216 CEST [44409] ERROR:  syntax error at or near "RETURNING" at character 18
+2021-10-20 10:59:59.216 CEST [44409] STATEMENT:  INSERT INTO cats RETURNING id
+2021-10-20 22:24:41.557 CEST [20372] LOG:  received smart shutdown request
+2021-10-20 22:24:41.559 CEST [20372] LOG:  background worker "logical replication launcher" (PID 20379) exited with exit code 1
+2021-10-20 22:24:41.559 CEST [20374] LOG:  shutting down
+2021-10-20 22:24:41.570 CEST [20372] LOG:  database system is shut down
+2021-10-21 09:07:53.519 CEST [1708] LOG:  starting PostgreSQL 12.2 on x86_64-apple-darwin17.7.0, compiled by clang version 10.0.0 , 64-bit
+2021-10-21 09:07:53.522 CEST [1708] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-10-21 09:07:53.522 CEST [1708] LOG:  listening on IPv6 address "::1", port 5432
+2021-10-21 09:07:53.523 CEST [1708] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2021-10-21 09:07:53.549 CEST [1709] LOG:  database system was shut down at 2021-10-20 22:24:41 CEST
+2021-10-21 09:07:53.566 CEST [1708] LOG:  database system is ready to accept connections
